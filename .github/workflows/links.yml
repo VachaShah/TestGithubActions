@@ -9,3 +9,7 @@ jobs:
         uses: lycheeverse/lychee-action@v1.0.8
         with:
           args: --verbose --no-progress --exclude lycheeverse/lychee-action@.* -- **/*.md **/*.html **/*.txt **/*.json
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Fail if there were link errors
+        run: exit ${{ steps.lychee.outputs.exit_code }}
