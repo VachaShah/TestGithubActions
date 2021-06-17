@@ -6,6 +6,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Link Checker
-        uses: ./ # Uses an action in the root directory
+        uses: lycheeverse/lychee-action@v1.0.8
         with:
           args: --verbose --no-progress --exclude lycheeverse/lychee-action@.* -- **/*.md **/*.html **/*.txt **/*.json
