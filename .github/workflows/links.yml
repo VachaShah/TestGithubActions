@@ -1,16 +1,11 @@
-name: Broken link check
 on: [push, pull_request]
-
 jobs:
-  broken_link_checker_job:
+  linkChecker:
     runs-on: ubuntu-latest
-    name: Check for broken links
     steps:
-    - name: Check for broken links
-      id: link-report
-      uses: celinekurpershoek/link-checker@v1.0.1
-      with:
-        # Required:
-        url: 'https://...'
-    - name: Get the result
-      run: echo "${{steps.link-report.outputs.result}}"
+      - uses: actions/checkout@v2
+      - name: lychee Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v1.0.8
+      - name: Fail if there were link errors
+        run: exit ${{ steps.lychee.outputs.exit_code }}
