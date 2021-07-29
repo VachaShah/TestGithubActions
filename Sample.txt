@@ -2,7 +2,7 @@ Sample text file with broken excluded links and one broken non-excluded link:
 
 http://www.unicode.org/Public/PROGRAMS/CVTUTF
 http://www.eclipse.org/jetty/downloads.php
-https://github.com/VachaShah/TestActions
+https://github.com/VachaShah/TestActions/
 http://project.carrot2.org/license.html
 http://bitbucket.org/jpbarrette/moman/overview/
 http://opensource.adobe.com/wiki/display/cmap/Downloads
