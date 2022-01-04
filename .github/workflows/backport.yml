@@ -8,6 +8,16 @@ on:
 jobs:
   backport:
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      checks: read
+      contents: read
+      deployments: read
+      discussions: read
+      issues: read
+      packages: read
+      pages: read
+      pull-requests: write
     name: Backport
     steps:
       - name: Backport
