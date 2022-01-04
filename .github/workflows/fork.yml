@@ -1,0 +1,18 @@
+name: Automatically fork this repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  fork-repos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Fork repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}      
+        run: |
+          npm install -g meta
+          gh repo fork --clone=false
