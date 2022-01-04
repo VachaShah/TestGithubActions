@@ -1,1 +1,1 @@
-Sample Notice file with broken link: https://github.com/VachaShah/TestActions/
+Sample Notice file with link: https://github.com/VachaShah/TestGithubActions
