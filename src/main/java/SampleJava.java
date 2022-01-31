@@ -11,5 +11,6 @@ public class SampleJava {
     System.out.println ("Adding a new line from github action");
     System.out.println ("Adding a new line from github action");
     System.out.println ("Adding a new line from github action");
+    System.out.println ("Adding a new line from github action");
     }
 }
