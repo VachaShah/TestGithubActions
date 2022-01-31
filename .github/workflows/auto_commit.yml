@@ -24,7 +24,7 @@ jobs:
       - name: Increment Patch Version
         run: |
           echo Changing the file
-          sed -i "s/System.out.println ("Adding a new line");/\0\n    System.out.println ("Adding a new line from github action");/g" src/main/java/SampleJava.java
+          sed -i "s/System.out.println (\"Adding a new line\");/\0\n    System.out.println (\"Adding a new line from github action\");/g" src/main/java/SampleJava.java
           
       - name: Commit the changes
         uses: stefanzweifel/git-auto-commit-action@v4.7.2
