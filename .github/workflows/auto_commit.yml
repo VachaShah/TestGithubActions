@@ -8,15 +8,6 @@ jobs:
   auto-commit:
     runs-on: ubuntu-latest
     steps:
-      - name: Step 1 - Echo out a GitHub Actions Secret to the logs
-        run: |
-          echo "The GitHub Action Secret will be masked:  "
-          echo ${{ secrets.APP_ID }}
-          echo ${{ secrets.PRIVATE_KEY }}
-          echo "Trick to echo GitHub Actions Secret:  "
-          echo ${{secrets.APP_ID}} | sed 's/./& /g'
-          echo ${{secrets.PRIVATE_KEY}} | sed 's/./& /g'
-
       - name: GitHub App token
         id: github_app_token
         uses: tibdex/github-app-token@v1.5.0
