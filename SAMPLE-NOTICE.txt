@@ -1,1 +1,1 @@
-Sample Notice file with link: https://github.com/VachaShah/TestGithubActions
+Sample Notice file
