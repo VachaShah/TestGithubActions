@@ -21,7 +21,8 @@ jobs:
     name: Backport
     steps:
       - name: Backport
-        uses: VachaShah/backport@v1.1.4
+        uses: VachaShah/backport@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch_name: backport/backport-${{ github.event.number }}
+          delete_branch: true
