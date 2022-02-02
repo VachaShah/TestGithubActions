@@ -21,8 +21,12 @@ jobs:
     name: Backport
     steps:
       - name: Backport
-        uses: VachaShah/backport@main
+        uses: VachaShah/backport@v1.1.4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch_name: backport/backport-${{ github.event.number }}
-          delete_branch: true
+
+      - name: Delete the backport branch
+        uses: SvanBoxel/delete-merged-branch@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
