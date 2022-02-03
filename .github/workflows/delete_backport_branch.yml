@@ -17,4 +17,4 @@ jobs:
         uses: SvanBoxel/delete-merged-branch@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: startWith(${BASE_BRANCH},'backport/')
+        if: startsWith(${BASE_BRANCH},'backport/')
