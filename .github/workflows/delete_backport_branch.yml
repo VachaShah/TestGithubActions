@@ -2,7 +2,7 @@ name: Delete merged branch of the backport PRs
 on: 
   pull_request:
     branches: 
-      - backport/*
+      - 'backport/**'
     types:
       - closed
   
