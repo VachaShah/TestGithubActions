@@ -8,6 +8,11 @@ jobs:
   delete-branch:
     runs-on: ubuntu-latest
     steps:
+      - name: Step that prints name of pull request's base branch
+        run: |
+          echo "Pull request's base branch is: ${BASE_BRANCH}"
+        env:
+          BASE_BRANCH: ${{ github.base_ref }}
       - name: Delete merged branch
         uses: SvanBoxel/delete-merged-branch@main
         env:
