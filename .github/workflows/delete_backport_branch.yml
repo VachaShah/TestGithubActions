@@ -7,6 +7,7 @@ on:
 jobs:
   delete-branch:
     runs-on: ubuntu-latest
+    if: startsWith(${{ github.event.pull_request.head.ref }},'backport/')
     steps:
       - name: Step that prints name of pull request's branch
         run: |
@@ -17,4 +18,3 @@ jobs:
         uses: SvanBoxel/delete-merged-branch@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: startsWith(${{ github.event.pull_request.head.ref }},'backport/')
