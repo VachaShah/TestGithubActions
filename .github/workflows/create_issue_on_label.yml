@@ -3,6 +3,8 @@ on:
   pull_request:
     types:
       - labeled
+env:
+  PR_NUMBER: ${{ github.event.number }}
 
 jobs:
   create-issue:
@@ -25,7 +27,7 @@ jobs:
         id: create-issue
         uses: peter-evans/create-issue-from-file@v4
         with:
-          title: An example issue
+          title: Documentation related to ${{ env.PR_NUMBER }}
           content-filepath: ./example-content/output.md
           labels: documentation
           repository: VachaShah/test-repo
