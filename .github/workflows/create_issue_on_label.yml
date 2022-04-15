@@ -8,16 +8,6 @@ jobs:
   create-issue:
     if: ${{ github.event.label.name == 'documentation-website' }}
     runs-on: ubuntu-latest
-    permissions:
-      actions: read
-      checks: read
-      contents: write
-      deployments: read
-      discussions: read
-      issues: write
-      packages: read
-      pages: read
-      pull-requests: write
     name: Create Documentation Issue
     steps:
       - name: Checkout code
