@@ -18,9 +18,10 @@ jobs:
       packages: read
       pages: read
       pull-requests: write
-      
     name: Create Documentation Issue
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Create Issue From File
         id: create-issue
         uses: peter-evans/create-issue-from-file@v4
