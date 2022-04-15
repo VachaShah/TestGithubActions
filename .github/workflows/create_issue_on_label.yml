@@ -18,6 +18,9 @@ jobs:
           private_key: ${{ secrets.PRIVATE_KEY }}
           installation_id: 22479998
 
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
       - name: Create Issue From File
         uses: peter-evans/create-issue-from-file@v4
         with:
