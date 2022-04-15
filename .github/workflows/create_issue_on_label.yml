@@ -4,7 +4,7 @@ on:
     types:
       - labeled
 env:
-  PR_NUMBER: ${{ github.event.number }}
+  PR_NUMBER: ${{ github.event.pull_request }}
 
 jobs:
   create-issue:
@@ -23,11 +23,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         
+      - name: Edit the issue template
+        run: |
+          echo "${{ env.PR_NUMBER }}." >> ./example-content/output.md
+          
       - name: Create Issue From File
         id: create-issue
         uses: peter-evans/create-issue-from-file@v4
         with:
-          title: Documentation related to ${{ env.PR_NUMBER }}
+          title: Documentation related to feature
           content-filepath: ./example-content/output.md
           labels: documentation
           repository: VachaShah/test-repo
