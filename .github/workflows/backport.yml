@@ -38,7 +38,7 @@ jobs:
           installation_id: 22479998
 
       - name: Backport
-        uses: tibdex/backport@v2.0.2
+        uses: tibdex/backport@v2
         with:
           github_token: ${{ steps.github_app_token.outputs.token }}
           head_template: backport/backport-${{ github.event.number }}
