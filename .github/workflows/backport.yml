@@ -41,4 +41,4 @@ jobs:
         uses: tibdex/backport@v2
         with:
           github_token: ${{ steps.github_app_token.outputs.token }}
-          head_template: backport/backport-${{ github.event.number }}
+          head_template: backport/backport-<%= number %>-to-<%= base %>
