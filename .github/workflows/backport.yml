@@ -38,7 +38,7 @@ jobs:
           installation_id: 22479998
 
       - name: Backport
-        uses: VachaShah/backport@main
+        uses: VachaShah/backport@b3df18ddcfa44fc8038e1c8a106c3fb0f07763df
         with:
           github_token: ${{ steps.github_app_token.outputs.token }}
           head_template: backport/backport-<%= number %>-to-<%= base %>
