@@ -35,3 +35,9 @@ jobs:
           commit_user_name: Vacha
           commit_user_email: vachshah@amazon.com
           commit_options: '--signoff'
+
+      - name: Show GitHub context   
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}   
+        run: echo "$GITHUB_CONTEXT"
+        shell: bash
